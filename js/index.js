@@ -1,5 +1,7 @@
 // Your code goes here
 
+// This is the first event listener: when mouseover occurs the text vecomes highlighted blue
+
 let navBar = document.querySelectorAll('a');
 
 navBar.forEach(nav => {nav.addEventListener('mouseover', event => {
@@ -16,6 +18,9 @@ navBar.forEach(nav => {nav.addEventListener('mouseover', event => {
 
 })
 
+// This is the second event listener: whenever you press on the buttons throughout the page it prevents the event from the 
+// capture phase.
+
 let buttons = document.querySelectorAll('.btn');
 
 buttons.forEach(button => {
@@ -23,6 +28,9 @@ buttons.forEach(button => {
         event.stopPropogation();
     })
 })
+
+// This is the third event listener: whenever you double click on any of the images on the webpage, the 
+// virtruvian man comes up.
 
 let newImg = document.querySelectorAll('img')
 
@@ -32,17 +40,35 @@ newImg.forEach(img => {
     })
 })
 
-let body = document.querySelector('body');
-body.addEventListener('keypress', event => {
-    alert('You pressed me!')
-    event.target.style.backgroundColor = 'grey';
+// This is the fourth event listener: When you press on the header that reads "Pick your Destination!"
+
+let pickhead = document.querySelector('.magnification_easter');
+pickhead.addEventListener('click', event => {
+    alert('You pressed me!');
 })
+
+// This is the fifth event listener: whenever you press on the "Fun bus" text on the navigation bar
+// a quote from A Clockwork Orange comes to life with a special comedic quote. 
 
 let mainHeader = document.querySelector('.main-navigation h1');
 
 mainHeader.addEventListener('click', event => {
     alert('Come and get one in the yarbles! If you have any yarbles, you eunuch jelly thou!');
 })
+
+// This is the sixth event listener: whenever you press on "Adventure Awaits" it will turn the color of the text to green.
+
+let adventureHead = document.querySelector('.magnification_easter_adventure');
+
+adventureHead.addEventListener('click', event => {
+    adventureHead.style.color = "green";
+})
+
+// This is the seventh event listener: whenever you hover over the First image of the bus it will allow you to magnify it!
+
+
+
+
 
 
 let destinations = document.querySelectorAll('.destination');
